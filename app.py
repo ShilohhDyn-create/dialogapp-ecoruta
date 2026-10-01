@@ -190,7 +190,7 @@ UI_TEXT = {
         "nav1": "🛠️ Design Eco-Route", "nav2": "🗣️ Translator & AI", "nav3": "🍫 EUDR Cocoa", "nav4": "🎫 Bookings & QR",
         "lbl_lang": "Language:", "lbl_profile": "Tourist Profile:", "lbl_offline": "⚡ Offline PWA Mode", "lbl_scan": "📱 Scan or click to open the App:",
         "prof_normal": "Normal", "prof_acad": "Academic", "prof_adv": "Adventure", "prof_well": "Wellness",
-        "step": "Step {} of 4", "btn_next": "Next ➡️", "btn_prev": "⬅️️ Previous", "btn_pay": "💳 PROCEED TO CHECKOUT 🚀", "btn_back": "⬅️ Back",
+        "step": "Step {} of 4", "btn_next": "Next ➡️", "btn_prev": "⬅ Previous", "btn_pay": "💳 PROCEED TO CHECKOUT 🚀", "btn_back": "⬅️ Back",
         "p1_title": "Step 1: Who is traveling?", "gopts": ["Solo (1 pers)", "Couple (2-3 pers)", "Family (4-8 pers)", "Group (9+ pers)"],
         "lbl_grupo": "Group type:", "lbl_pers": "Exact number:", "lbl_nights": "Nights of stay:",
         "p2_title": "Step 2: Activities & Accommodation", "lbl_rec": "Recommended for your profile", "lbl_all_acts": "All activities",
@@ -208,7 +208,7 @@ UI_TEXT = {
         "gw_title": "💳 Payment Gateway", "gw_method": "Payment Method", "gw_opts": ["Credit Card", "Local Bank Transfer", "Mobile Wallet", "Cash"],
         "gw_name": "Cardholder Name *", "gw_doc": "Cardholder ID *", "gw_card": "Card Number *", "gw_exp": "Exp (MM/YY)", "gw_cvv": "CVV (3 digits) *",
         "gw_term": "I accept Data and Safety Policies.", "btn_conf": "💳 CONFIRM BOOKING", "msg_succ": "🎉 Booking Successfully Confirmed!", 
-        "qr_tit": "🎟️️ Biocultural Digital Pass", "lbl_holder": "Cardholder", "msg_no_book": "No active bookings at the moment.",
+        "qr_tit": "🎟 Biocultural Digital Pass", "lbl_holder": "Cardholder", "msg_no_book": "No active bookings at the moment.",
         "eudr_title": "🍫 EUDR Cocoa Route — Fair Trade Showcase", "eudr_sub": "Satellite traceability and Zero Deforestation certification (EUDR)",
         "col_lote": "Cocoa Lot", "col_gps": "GPS Coordinates", "col_eudr": "EUDR Compliance", "lbl_ok": "✅ Verified Zero Deforestation",
         "ai_title": "🤖 Elder — Smart Biocultural AI", "ai_input": "Ask the Elder (e.g. hello, thanks, water, food, cacao, health):",
@@ -257,13 +257,13 @@ UI_TEXT = {
         "ai_resp_bano": "💧 Banheiros ecológicos secos estão disponíveis em cada comunidade.",
         "ai_resp_salud": "🌿 A medicina tradicional baseia-se em plantas sagradas. Seguro de resgate integrado.",
         "ai_resp_def": "💡 Ouço você. Pergunte-me sobre cumprimentos, obrigado, água, comida, cacau ou saúde.",
-        "ai_trans_title": "🗣️ Soberania Linguística — Tradução em Línguas Amazônicas & Globais:"
+        "ai_trans_title": "🗣️ Soberania Linguística — Tradução em Línguas Amazônicas & Globales:"
     },
     "Français": {
         "title": "🌿 Dialogapp — Écoroute", "sub": "Connectez-vous avec les communautés autochtones sans intermédiaires.",
         "nav1": "🛠 Créer Écoroute", "nav2": "🗣 Traducteur et IA", "nav3": "🍫 Cacao EUDR", "nav4": "🎫 Réservations et QR",
         "lbl_lang": "Langue:", "lbl_profile": "Profil Touriste:", "lbl_offline": "⚡ Mode Hors Ligne", "lbl_scan": "📱 Scannez ou cliquez pour ouvrir l'App:",
-        "prof_normal": "Normal", "prof_acad": "Académique", "prof_adv": "Aventura", "prof_well": "Bien-être",
+        "prof_normal": "Normal", "prof_acad": "Académique", "prof_adv": "Aventure", "prof_well": "Bien-être",
         "step": "Étape {} sur 4", "btn_next": "Suivant ➡️", "btn_prev": "⬅ Précédent", "btn_pay": "💳 PROCÉDER AU PAIEMENT 🚀", "btn_back": "⬅️ Retour",
         "p1_title": "Étape 1: Avec qui voyagez-vous?", "gopts": ["Solo (1 pers)", "Couple (2-3 pers)", "Famille (4-8 pers)", "Groupe (9+ pers)"],
         "lbl_grupo": "Type de groupe:", "lbl_pers": "Nombre exact:", "lbl_nights": "Nuits de séjour:",
@@ -385,9 +385,9 @@ DATA_FOOD = {
 }
 
 # ------------------------------------------------------------------
-# URL BASE DE LA APLICACIÓN
+# URL OFICIAL DE TU APP EN STREAMLIT CLOUD (ACTUALIZADA PARA EL QR)
 # ------------------------------------------------------------------
-APP_URL = "http://localhost:8501"
+APP_URL = "https://dialogapp-ecoruta-vqklagx9wovgdnmffkqymh.streamlit.app"
 
 # ------------------------------------------------------------------
 # BARRA LATERAL (SIDEBAR CON QR CLICLEABLE Y FUNCIONAL)
@@ -534,7 +534,7 @@ if pagina == t["nav1"]:
             pasajeros.append({"nom": p_nom, "ed": p_ed, "doc": p_doc, "alg": p_alg, "cond": p_cond})
 
         costo_seg = 30000 * cant_p
-        st.info(f"🛡️️ **{t['lbl_ins']}:** {cop(costo_seg)}")
+        st.info(f"🛡️ **{t['lbl_ins']}:** {cop(costo_seg)}")
 
         st.session_state.pasajeros_temp = pasajeros
         st.session_state.costo_seg_temp = costo_seg
